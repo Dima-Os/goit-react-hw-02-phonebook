@@ -32,20 +32,24 @@ class App extends Component {
           contacts: [...prevState.contacts, contact],
         }));
   };
+
   onChangeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
   };
+
   onDeleteButton = id => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(el => el.id !== id),
     }));
   };
+
   getVisibleContacts = () => {
     const normalizedFilter = this.state.filter.toLowerCase();
     return this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter),
     );
   };
+
   render() {
     const visibleContacts = this.getVisibleContacts();
     return (
