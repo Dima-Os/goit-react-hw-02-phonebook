@@ -1,0 +1,10 @@
+@import-normalize;
+
+html {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(250, 250, 250);
+  background-image: url('./img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

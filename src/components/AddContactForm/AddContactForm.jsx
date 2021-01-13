@@ -18,25 +18,29 @@ class AddContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form className={s.form} onSubmit={this.onFormSubmit}>
-        <label>
+        <label className={s.label}>
           Please input name:
           <input
+            className={s.input}
             type="text"
             name="name"
             value={name}
             onChange={this.onChangeInput}
           />
         </label>
-        <label>
+        <label className={s.label}>
           Please input number:
           <input
+            className={s.input}
             type="tel"
             name="number"
             value={number}
             onChange={this.onChangeInput}
           />
         </label>
-        <button type="submit">Add contact</button>
+        <button className={s.button} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { v4 as uuid } from 'uuid';
 
+import s from './App.module.css';
+
+import Container from './components/Container';
 import Filter from './components/Filter';
 import AddContactForm from './components/AddContactForm';
 import ContactsList from './components/ContactsList';
@@ -46,8 +49,8 @@ class App extends Component {
   render() {
     const visibleContacts = this.getVisibleContacts();
     return (
-      <>
-        <h1>Phonebook</h1>
+      <Container>
+        <h1 className={s.mainHeading}>Phonebook</h1>
         <AddContactForm onAddContact={this.onAddContact} />
         <h2>Contacts: </h2>
         <Filter onChangeFilter={this.onChangeFilter} />
@@ -55,7 +58,7 @@ class App extends Component {
           visibleContacts={visibleContacts}
           onDeleteButton={this.onDeleteButton}
         />
-      </>
+      </Container>
     );
   }
 }
