@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Dima-Os.github.io",
+  "homepage": "https://Dima-Os.github.io/goit-react-hw-02-phonebook",
   "name": "react-hw-template",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b gh-page -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
